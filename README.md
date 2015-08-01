@@ -57,7 +57,49 @@ Unshifted       â-7531902468à
 US Variant
 ----------
 
+This  is targetted  at the  generic 104-key  US layout,  preferably one  with a
+single-line enter key, and backslash placed between it and backspace.
+
 - The key standard Neo2 maps to the right-hand-side Mod3 (labelled backslash on
   a US keyboard) is instead mapped to Mod4.
 
 - Right shift is remapped to Escape since I've never used it for shifting.
+
+Happy Hacking JP Variant
+------------------------
+
+This is targetted at the JP line of Happy Hacking keyboards. I'm unclear on how
+consistent Japanese layouts are, particularly with respect to modifiers; it may
+or may not be appropriate for others.
+
+For  reference,  the  physical  layout  of the  bottom  (thumb)  row  is  (with
+gratuitous ASCII approximation):
+```
+  [Fn   ][HHLogo][<>    ][Alt   ][(/)   ][Space         ][(_)   ][Kana  ][Alt   ][Fn    ]
+```
+
+`<>`  is   the  Windows  key.  `(/)`   is  Muhenkan  ("no  conversion"   /  "no
+transformation" (of kana  to kanji)). `(_)` is  Henkan ("conversion"). "HHLogo"
+is "Hankaku/Zankaku" ("halfwidth/fullwidth").
+
+This variant makes the following bindings:
+
+- `(/)` Muhenkan = Mod3
+- `(_)` Henkan = Mod4
+- Kana = Compose
+- `]` (corresponding to backslash on a US keyboard) = Enter
+- `¥` = Backspace
+
+The final two are simply there to make the key they are adjacent to effectively
+larger. The  former would  be another Mod4  key in standard  Neo2, but  this is
+unnecessary since  the thumb  can handle it  independently. The  latter doesn't
+appear to correspond to anything on an  ISO 105-key keyboard and has no binding
+at all in standard Neo2.
+
+CapsLock is untouched (from the `de`  default of actually being capslock) since
+it is  not directly accessible and  cannot be usefully chorded.  Right shift is
+untouched  since it  is unusably  far away  from the  normal position  of one's
+hands, an impressive achievement on such a small keyboard.
+
+Hankaku/Zankaku  is currently  unbound  because I  couldn't  think of  anything
+useful to do with it.

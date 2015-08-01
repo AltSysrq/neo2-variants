@@ -227,7 +227,7 @@ partial alphanumeric_keys modifier_keys keypad_keys
 xkb_symbols "neo2v_us" {
     include "neo2v(neo2v_base)"
 
-    name[Group1]= "German (Neo 2)";
+    name[Group1]= "German (Neo 2 / US)";
 
     //include "shift(both_capslock)"
     include "level3(caps_switch)"
@@ -244,5 +244,43 @@ xkb_symbols "neo2v_us" {
     key <RTSH> {
       type[Group1] = "ONE_LEVEL",
       symbols[Group1] = [ Escape ]
+    };
+};
+
+// Modifiers for a Happy Hacking JP keyboard
+partial alphanumeric_keys modifier_keys keypad_keys
+xkb_symbols "neo2v_hhjp" {
+    include "neo2v(neo2v_base)"
+
+    name[Group1]= "German (Neo 2 / HH JP)";
+
+    key <NFER> { // Muhenkan
+      type[Group1] = "ONE_LEVEL",
+      symbols[Group1] = [ ISO_Level3_Shift ]
+    };
+    modifier_map Mod3 { ISO_Level3_Shift };
+
+    key <XFER> { // Henkan
+      type[Group1] = "ONE_LEVEL",
+      symbols[Group1] = [ ISO_Level5_Shift ]
+    };
+    modifier_map Mod3 { ISO_Level5_Shift };
+
+    key <KANA> {
+      type[Group1] = "ONE_LEVEL",
+      symbols[Group1] = [ Multi_key ]
+    };
+    key <HKTG> {
+      type[Group1] = "ONE_LEVEL",
+      symbols[Group1] = [ Multi_key ]
+    };
+
+    key <BKSL> { // Labelled right-bracket
+      symbols[Group1] = [ Return, Return ]
+    };
+
+    key <AE13> { // Yen/Pipe
+      type[Group1] = "ONE_LEVEL",
+      symbols[Group1] = [ BackSpace ]
     };
 };
