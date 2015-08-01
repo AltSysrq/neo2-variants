@@ -1,7 +1,6 @@
-// based on a keyboard map from an 'xkb/symbols/de' file
-
+// BEGIN: Copied from $PREFIX/share/X11/xkb/symbols/de
 default
-xkb_symbols "basic" {
+xkb_symbols "de_basic" {
 
     include "latin(type4)"
 
@@ -26,7 +25,7 @@ xkb_symbols "basic" {
     key <AD03>	{ [         e,          E,     EuroSign,     EuroSign ]	};
     key <AD06>	{ [         z,          Z,    leftarrow,          yen ]	};
     key <AD11>	{ [udiaeresis, Udiaeresis, dead_diaeresis, dead_abovering ] };
-    key <AD12>	{ [      plus,   asterisk,   asciitilde,  macron ]	};
+    key <AD12>	{ [      plus,   asterisk,   dead_tilde,  dead_macron ]	};
 
     key <AC02>  { [         s,          S,                U017F,     U1E9E    ] };
     key <AC07>  { [         j,          J,        dead_belowdot, dead_abovedot   ] };
@@ -49,6 +48,13 @@ xkb_symbols "basic" {
     include "level3(ralt_switch)"
 };
 
+// END Straight copying
+// The basic Neo2 layout follows, with some modifications as described in the
+// README.
+//
+// As in the original xkb file, neo2v_base sets up the common key maps, and
+// neo2v_us and neo2v_hhjp configure modifiers and so forth.
+
 // German Neo-Layout Version 2
 // adopted 2004 by Hanno Behrens <Hanno.Behrens@gmx.de>
 // inspired by Dvorak/de-ergo  http://www.goebel-consult.de/de-ergo/
@@ -65,7 +71,7 @@ xkb_symbols "basic" {
 // $Revision$, $Date$
 
 partial alphanumeric_keys modifier_keys keypad_keys
-xkb_symbols "neo_base" {
+xkb_symbols "neo2v_base" {
 
     // Levels in Neo jargon
     // --------------------------------------------------------------
@@ -103,19 +109,19 @@ xkb_symbols "neo_base" {
     // --------------------------------------------------------------
     key <TLDE> { [ dead_circumflex,         dead_caron,              U21BB,                   U02DE,                   dead_abovedot,           Pointer_EnableKeys,      dead_belowdot,           NoSymbol                 ] };
 
-    key <AE01> { [ 1,                       degree,                  onesuperior,             onesubscript,            ordfeminine,             NoSymbol,                notsign,                 NoSymbol                 ] };
-    key <AE02> { [ 2,                       section,                 twosuperior,             twosubscript,            masculine,               NoSymbol,                logicalor,               NoSymbol                 ] };
-    key <AE03> { [ 3,                       U2113,                   threesuperior,           threesubscript,          numerosign,              NoSymbol,                logicaland,              NoSymbol                 ] };
-    key <AE04> { [ 4,                       guillemotright,          U203A,                   femalesymbol,            NoSymbol,                NoSymbol,                U22A5,                   NoSymbol                 ] };
-    key <AE05> { [ 5,                       guillemotleft,           U2039,                   malesymbol,              periodcentered,          NoSymbol,                U2221,                   NoSymbol                 ] };
-    key <AE06> { [ 6,                       dollar,                  cent,                    U26A5,                   sterling,                NoSymbol,                U2225,                   NoSymbol                 ] };
+    key <AE02> { [ 7,                       degree,                  onesuperior,             onesubscript,            ordfeminine,             NoSymbol,                notsign,                 NoSymbol                 ] };
+    key <AE03> { [ 5,                       section,                 twosuperior,             twosubscript,            masculine,               NoSymbol,                logicalor,               NoSymbol                 ] };
+    key <AE04> { [ 3,                       U2113,                   threesuperior,           threesubscript,          numerosign,              NoSymbol,                logicaland,              NoSymbol                 ] };
+    key <AE05> { [ 1,                       guillemotright,          U203A,                   femalesymbol,            NoSymbol,                NoSymbol,                U22A5,                   NoSymbol                 ] };
+    key <AE06> { [ 9,                       guillemotleft,           U2039,                   malesymbol,              periodcentered,          NoSymbol,                U2221,                   NoSymbol                 ] };
+    key <AE07> { [ 0,                       dollar,                  cent,                    U26A5,                   sterling,                NoSymbol,                U2225,                   NoSymbol                 ] };
 
-    key <AE07> { [ 7,                       EuroSign,                yen,                     U03F0,                   currency,                NoSymbol,                rightarrow,              NoSymbol                 ] };
-    key <AE08> { [ 8,                       doublelowquotemark,      singlelowquotemark,      U27E8,                   Tab,                     ISO_Left_Tab,            U221E,                   NoSymbol                 ] };
-    key <AE09> { [ 9,                       leftdoublequotemark,     leftsinglequotemark,     U27E9,                   KP_Divide,               KP_Divide,               variation,               NoSymbol                 ] };
-    key <AE10> { [ 0,                       rightdoublequotemark,    rightsinglequotemark,    zerosubscript,           KP_Multiply,             KP_Multiply,             emptyset,                NoSymbol                 ] };
+    key <AE08> { [ 2,                       EuroSign,                yen,                     U03F0,                   currency,                NoSymbol,                rightarrow,              NoSymbol                 ] };
+    key <AE09> { [ 4,                       doublelowquotemark,      singlelowquotemark,      U27E8,                   Tab,                     ISO_Left_Tab,            U221E,                   NoSymbol                 ] };
+    key <AE10> { [ 6,                       leftdoublequotemark,     leftsinglequotemark,     U27E9,                   KP_Divide,               KP_Divide,               variation,               NoSymbol                 ] };
+    key <AE11> { [ 8,                       rightdoublequotemark,    rightsinglequotemark,    zerosubscript,           KP_Multiply,             KP_Multiply,             emptyset,                NoSymbol                 ] };
 
-    key <AE11> { [ minus,                   emdash,                  NoSymbol,                U2011,                   KP_Subtract,             KP_Subtract,             hyphen,                  NoSymbol                 ] };
+    key <AE01> { [ minus,                   emdash,                  NoSymbol,                U2011,                   KP_Subtract,             KP_Subtract,             hyphen,                  NoSymbol                 ] };
     key <AE12> { [ dead_grave,              dead_cedilla,            dead_abovering,          dead_dasia,              dead_diaeresis,          NoSymbol,                dead_macron,             NoSymbol                 ] };
 
     // Top row
@@ -161,7 +167,7 @@ xkb_symbols "neo_base" {
     key <AB02> { [ odiaeresis,              Odiaeresis,              dollar,                  U03F5,                   Tab,                     Tab,                     intersection,            NoSymbol                 ] };
     key <AB03> { [ adiaeresis,              Adiaeresis,              bar,                     Greek_eta,               Insert,                  Insert,                  U2135,                   NoSymbol                 ] };
     key <AB04> { [ p,                       P,                       asciitilde,              Greek_pi,                Return,                  Return,                  Greek_PI,                NoSymbol                 ] };
-    key <AB05> { [ z,                       Z,                       grave,                   Greek_zeta,              Undo,                    Redo,                    U2124,                   NoSymbol                 ] };
+    key <AB05> { [ z,                       Z,                       grave,                   Greek_zeta,              Undo,                    Undo,                    U2124,                   NoSymbol                 ] };
 
     key <AB06> { [ b,                       B,                       plus,                    Greek_beta,              colon,                   NoSymbol,                U21D0,                   NoSymbol                 ] };
     key <AB07> { [ m,                       M,                       percent,                 Greek_mu,                KP_1,                    KP_1,                    ifonlyif,                NoSymbol                 ] };
@@ -186,7 +192,7 @@ xkb_symbols "neo_base" {
     // Topmost row
     // --------------------------------------------------------------
     key <KPDV> { [ KP_Divide,               KP_Divide,               division,                U2300,                   U2215,                   NoSymbol,                U2223,                   NoSymbol                 ] };
-    key <KPMU> { [ KP_Multiply,             KP_Multiply,             U22C5,                   U2299,                   multiply,                NoSymbol,                U2297,                   NoSymbol                 ] };
+    key <KPMU> { [ KP_Multiply,             KP_Multiply,             U2219,                   U2299,                   multiply,                NoSymbol,                U2297,                   NoSymbol                 ] };
     key <KPSU> { [ KP_Subtract,             KP_Subtract,             U2212,                   U2296,                   U2216,                   NoSymbol,                U2238,                   NoSymbol                 ] };
 
     // Top row
@@ -216,16 +222,27 @@ xkb_symbols "neo_base" {
     key <KPDL> { [ KP_Separator,            period,                  comma,                   minutes,                 KP_Delete,               KP_Delete,               seconds,                 NoSymbol                 ] };
 };
 
+// Modifier mapping for use on a US keyboard.
 partial alphanumeric_keys modifier_keys keypad_keys
-xkb_symbols "neo" {
-
-    include "de(neo_base)"
+xkb_symbols "neo2v_us" {
+    include "neo2v(neo2v_base)"
 
     name[Group1]= "German (Neo 2)";
 
-    include "shift(both_capslock)"
+    //include "shift(both_capslock)"
     include "level3(caps_switch)"
-    include "level3(bksl_switch)"
+    //include "level3(bksl_switch)"
+    key <BKSL> {
+      type[Group1]="ONE_LEVEL",
+      symbols[Group1] = [ ISO_Level5_Shift ]
+    };
+    modifier_map Mod3   { ISO_Level5_Shift };
+
     include "level5(lsgt_switch)"
-    include "level5(ralt_switch)"
+    //include "level5(ralt_switch)"
+
+    key <RTSH> {
+      type[Group1] = "ONE_LEVEL",
+      symbols[Group1] = [ Escape ]
+    };
 };
