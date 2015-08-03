@@ -258,9 +258,25 @@ xkb_symbols "neo2v_hhjp" {
       type[Group1] = "ONE_LEVEL",
       symbols[Group1] = [ ISO_Level3_Shift ]
     };
+    key <MUHE> { // Muhenkan
+      type[Group1] = "ONE_LEVEL",
+      symbols[Group1] = [ ISO_Level3_Shift ]
+    };
+    key <UNK7> { // Muhenkan
+      type[Group1] = "ONE_LEVEL",
+      symbols[Group1] = [ ISO_Level3_Shift ]
+    };
     modifier_map Mod3 { ISO_Level3_Shift };
 
     key <XFER> { // Henkan
+      type[Group1] = "ONE_LEVEL",
+      symbols[Group1] = [ ISO_Level5_Shift ]
+    };
+    key <HENK> { // Henkan
+      type[Group1] = "ONE_LEVEL",
+      symbols[Group1] = [ ISO_Level5_Shift ]
+    };
+    key <UNK8> { // Henkan
       type[Group1] = "ONE_LEVEL",
       symbols[Group1] = [ ISO_Level5_Shift ]
     };
