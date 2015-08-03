@@ -41,7 +41,7 @@ setxkbmap neo2v neo2v_hhjp
 Note that if you are using X11 autoconfiguration via evdev instead of manual
 configuration, evdev will for some reason override the bindings for the
 modifier keys. You currently will need to edit
-`$PREFIX/share/X11/xkb/symbols/evdev` and delete all lines pertaining to
+`$PREFIX/share/X11/xkb/symbols/inet` and delete all lines pertaining to
 Henkan, Muhenkan, and Hiragana/Katakana.
 
 Differences from standard Neo2 (common)
