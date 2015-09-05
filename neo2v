@@ -299,4 +299,9 @@ xkb_symbols "neo2v_hhjp" {
       type[Group1] = "ONE_LEVEL",
       symbols[Group1] = [ BackSpace ]
     };
+
+    key <AB11> { // Backslash/Underscore
+      symbols[Group1] = [ underscore, underscore, underscore, underscore,
+                          underscore, NoSymbol,   underscore, NoSymbol ]
+    };
 };

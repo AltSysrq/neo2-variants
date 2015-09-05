@@ -93,6 +93,7 @@ This variant makes the following bindings:
 - `(/)` Muhenkan = Mod3
 - `(_)` Henkan = Mod4
 - Kana = Compose
+- `\_` = Underscore
 - `]` (corresponding to backslash on a US keyboard) = Enter
 - `¥` = Backspace
 
