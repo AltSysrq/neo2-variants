@@ -60,6 +60,8 @@ Shifted         ǎ—°§ℓ»«$€„“”ç
 Unshifted       â-7531902468à
 ```
 
+Both variants also bind exclamation point to F24 so that the Yubikey can type it.
+
 US Variant
 ----------
 
@@ -110,3 +112,44 @@ hands, an impressive achievement on such a small keyboard.
 
 Hankaku/Zankaku  is currently  unbound  because I  couldn't  think of  anything
 useful to do with it.
+
+Yubikey Configuration
+---------------------
+
+If you want to use the Yubikey Neo with either of the layouts, you can
+configure that with the following command:
+
+```
+  ykpersonalize -S15113309120a1816381c080d0e0f041a9591b389928a9896b89c888d8e8f849a242225212620271f2d23732b28
+```
+
+Note that `ykpersonalize`'s command-line argument parsing is broken, and using
+the perhaps more natural `-S 15...` will result in it resetting the device map
+to QWERTY. Also note that, though not documented, you can't change the scanmap
+while the device is programmed, so you may need to do
+```
+  ykpersonalize -z -1
+  ykpersonalize -z -2
+```
+
+first. (Note that this will clear all the configuration! In particular, it
+destroys the factory-preset first configuration irrecoverably. Maybe there is
+some way to change the scanmap without nuking it, but I have not found it.)
+
+Derivation (`+` = "hold shift", indicated to Yubikey by setting bit 7):
+
+```
+  c  b  d  e  f  g  h  i  j  k  l  n  r  t  u  v
+  R  N  ;  F  O  I  U  S  /  Y  E  J  K  L  A  W
+ 15 11 33 09 12 0a 18 16 38 1c 08 0d 0e 0f 04 1a
+
+  C  B  D  E  F  G  H  I  J  K  L  N  R  T  U  V
+ +R +N +; +F +O +I +U +S +/ +Y +E +J +K +L +A +W
+ 95 91 b3 89 92 8a 98 96 b8 9c 88 8d 8e 8f 84 9a
+
+  0  1  2  3  4  5  6  7  8  9  ! \t \r
+  7  5  8  4  9  3  0  2  -  6 F24 HT RET
+ 24 22 25 21 26 20 27 1f 2d 23 73 2b 28
+```
+
+See for reference http://www.freebsddiary.org/APC/usb_hid_usages.php

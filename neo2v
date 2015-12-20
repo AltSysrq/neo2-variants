@@ -220,6 +220,12 @@ xkb_symbols "neo2v_base" {
     // --------------------------------------------------------------
     key  <KP0> { [ KP_0,                    U2423,                   percent,                 U2030,                   KP_Insert,               KP_Insert,               U25A1,                   NoSymbol                 ] };
     key <KPDL> { [ KP_Separator,            period,                  comma,                   minutes,                 KP_Delete,               KP_Delete,               seconds,                 NoSymbol                 ] };
+
+    // For Yubikey
+    key <KF24> {
+      type[Group1] = "ONE_LEVEL",
+      symbols[Group1] = [ exclam ]
+    };
 };
 
 // Modifier mapping for use on a US keyboard.
