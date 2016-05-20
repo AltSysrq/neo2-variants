@@ -60,7 +60,10 @@ Shifted         ǎ—°§ℓ»«$€„“”ç
 Unshifted       â-7531902468à
 ```
 
-Both variants also bind exclamation point to F24 so that the Yubikey can type it.
+Both variants also bind exclamation point to F24 so that the Yubikey can type
+it.
+
+Both variants alter Shift+`.` to still produce `.` instead of `•`.
 
 US Variant
 ----------
