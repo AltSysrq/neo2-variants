@@ -65,6 +65,10 @@ it.
 
 Both variants alter Shift+`.` to still produce `.` instead of `•`.
 
+Both variants change all keypad keys accessible through level-5 shift to the
+non-keypad variants, since a number of terminal programs (eg, less and vim)
+somehow don't understand the corresponding escape sequences.
+
 US Variant
 ----------
 
