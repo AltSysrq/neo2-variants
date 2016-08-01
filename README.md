@@ -103,11 +103,10 @@ This variant makes the following bindings:
 - `(_)` Henkan = Mod4
 - Kana = Compose
 - `\_` = Underscore
-- `]` (corresponding to backslash on a US keyboard) = Enter
-- `¥` = Backspace
+- `]` (corresponding to backslash on a US keyboard) = F13
+- `¥` = F14
 
-The final two are simply there to make the key they are adjacent to effectively
-larger. The  former would  be another Mod4  key in standard  Neo2, but  this is
+The one mapped to  F13 would be another Mod4 key in standard  Neo2, but this is
 unnecessary since  the thumb  can handle it  independently. The  latter doesn't
 appear to correspond to anything on an  ISO 105-key keyboard and has no binding
 at all in standard Neo2.

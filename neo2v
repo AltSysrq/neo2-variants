@@ -298,12 +298,13 @@ xkb_symbols "neo2v_hhjp" {
     };
 
     key <BKSL> { // Labelled right-bracket
-      symbols[Group1] = [ Return, Return ]
+      type[Group1] = "ONE_LEVEL",
+      symbols[Group1] = [ F13 ]
     };
 
     key <AE13> { // Yen/Pipe
       type[Group1] = "ONE_LEVEL",
-      symbols[Group1] = [ BackSpace ]
+      symbols[Group1] = [ F14 ]
     };
 
     key <AB11> { // Backslash/Underscore
