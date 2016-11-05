@@ -253,6 +253,41 @@ xkb_symbols "neo2v_us" {
     };
 };
 
+// Modifier mapping for use on a US ChromeOS keyboard.
+partial alphanumeric_keys modifier_keys keypad_keys
+xkb_symbols "neo2v_cos" {
+    include "neo2v(neo2v_base)"
+
+    name[Group1]= "German (Neo 2 / US ChromeOS)";
+
+    key <LWIN> { [ Control_L ] };
+    modifier_map Control { <LWIN> };
+    key <LCTL> { [ Alt_L ] };
+    modifier_map Mod1 { <LCTL> };
+    key <LALT> {
+      type[Group1]="ONE_LEVEL",
+      symbols[Group1] = [ ISO_Level3_Shift ]
+    };
+    modifier_map Mod3   { ISO_Level3_Shift };
+    key <RALT> {
+      type[Group1]="ONE_LEVEL",
+      symbols[Group1] = [ ISO_Level5_Shift ]
+    };
+    modifier_map Mod3   { ISO_Level5_Shift };
+    key <RCTL> { [ Super_R ] };
+    modifier_map Mod4 { <RCTL> };
+
+    key <RTSH> {
+      symbols[Group1] = [ underscore, underscore, underscore, underscore,
+                          underscore, NoSymbol,   underscore, NoSymbol ]
+    };
+
+    key <BKSL> {
+      type[Group1]="ONE_LEVEL",
+      symbols[Group1] = [ F12 ]
+    };
+};
+
 // Modifiers for a Happy Hacking JP keyboard
 partial alphanumeric_keys modifier_keys keypad_keys
 xkb_symbols "neo2v_hhjp" {

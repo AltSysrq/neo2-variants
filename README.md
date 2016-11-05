@@ -7,9 +7,6 @@ Familariaty with this layout is assumed for the rest of this document.
 
 The variants serve three main purposes:
 
-- I use right-alt  a lot (especially in  Emacs), so remapping it  to Mod4 isn't
-  really acceptable.
-
 - I don't own  any keyboard with an  ISO layout, which is assumed  by Neo. This
   means the  only _other_ Mod4  key (after rebinding  right-alt back to  an alt
   key) doesn't actually exist on a US  keyboard. While both exist on a Japanese
@@ -17,6 +14,8 @@ The variants serve three main purposes:
   for these modifiers.
 
 - Change the number bar to be like Dvorak Classic instead of Qwerty.
+
+- Make the US keyboards more thumb-accessible.
 
 A decent amount of this is probably particular to the way I learned to type; in
 particular, the changes to right shift are probably unwelcome by many.
@@ -36,6 +35,7 @@ You can switch to the layouts with `setxkbmap`:
 ```sh
 setxkbmap neo2v neo2v_us
 setxkbmap neo2v neo2v_hhjp
+setxkbmap neo2v neo2v_cos
 ```
 
 Note that if you are using X11 autoconfiguration via evdev instead of manual
@@ -46,8 +46,6 @@ Henkan, Muhenkan, and Hiragana/Katakana.
 
 Differences from standard Neo2 (common)
 ---------------------------------------
-
-The right alt key is always actually right alt in all the variants.
 
 The keys between  and including the ones  labelled `1` and `=`  are rotated one
 space to the right. This moves _all_  the symbols on each key. Then, the digits
@@ -71,6 +69,9 @@ somehow don't understand the corresponding escape sequences.
 
 US Variant
 ----------
+
+The right alt key is always actually right alt. This will probably change soon
+to match the US-ChromeOS variant.
 
 This  is targetted  at the  generic 104-key  US layout,  preferably one  with a
 single-line enter key, and backslash placed between it and backspace.
@@ -118,6 +119,22 @@ hands, an impressive achievement on such a small keyboard.
 
 Hankaku/Zankaku  is currently  unbound  because I  couldn't  think of  anything
 useful to do with it.
+
+US ChromeOS Variant
+-------------------
+
+The Google Chromebook moves the logo key to where CapsLOCK normally is. It has
+no CAPSlock key, and additionally lacks F11 or F12 keys. There is no `fn` key,
+nor right-side logo nor context-menu keys.
+
+This variant tries to mimmic the HHJP variant instead of the US variant.
+
+Left alt is rebound to level-3 shift. Left control is left alt, and left logo
+(where CapsLOCK would normally be) is left control. Right alt is level 5 shift,
+and right control is logo.
+
+Right shift is underscore, to mimic the extra key on the Japanese keyboard.
+Backslash is F12. (There is still no F11.)
 
 Yubikey Configuration
 ---------------------
